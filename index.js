@@ -42,6 +42,6 @@ app.get(".*", function(req, res){
   res.render("./404notfound");
 });
 
-app.listen(8080, function(){
+app.listen(process.env.PORT || 8080, function(){
         console.log("SERVER STARTED ON localhost:8080");     
 })
