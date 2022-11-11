@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html lang="en">
+  <%- include('../../../partials/header') %>
+<body>
+
+    <%- include('../../../partials/navigation') %>
+
+    <div class="row m-0">
+      <div class="col col-lg-2 col-12 col-sm-12">
+      </div>
+    
+      <div class="col col-lg-8 col-12 col-sm-12 container-sm p-2 blog">
+                        
+                
+        <h3>Message Queue</h3>
+
+        <p>
+            In designing asynchronous applications Message Queues plays a major role. And it also helps systems to scale with less 
+            dependency on frontend and backend components.
+        </p>
+
+        <p>
+            A Message Queue is a component that buffers and distributes asynchronous requests. In the MQ context messages are assumed 
+            to be one-way, fire and forget requests. Messages are created by message producers and then buffered by MQ. Finally they 
+            are delivered to consumers.
+        </p>
+
+        <h4>Advantages</h4>
+        <p>
+          <ol>
+            <li>Producers and consumers can use different technologies.</li>
+            <li>Producers and consumers can scale independently.</li>
+            <li>The separation of producers and consumers using queue gives us the benefit of non blocking communication.</li>
+          </ol>
+        </p>
+
+
+      </div>
+    
+      <div class="col col-lg-2 col-12 col-sm-12"></div>
+    </div>
+
+    
+  <%- include('../../../partials/footer') %>
+</body>
+</html>
+
+<!-- End of .container -->

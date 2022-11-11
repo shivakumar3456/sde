@@ -1,0 +1,132 @@
+
+<!doctype html>
+<html lang="en">
+  <%- include('../../../partials/header') %>
+  <!-- <head>
+    <link rel="stylesheet" href="./app/caching/caching.css">
+  </head> -->
+<body>
+
+    <%- include('../../../partials/navigation') %>
+
+    <div class="row m-0">
+      <div class="col col-lg-2 col-12 col-sm-12"></div>
+    
+      <div class="col col-lg-8 col-12 col-sm-12 container-sm p-2 blog">
+                                  
+        
+<div>
+    <H3> Cache </H3>
+  
+    <p>
+        Cache contains most recently accessed data as there is chance that recently requested data is asked again and again.
+    </p>
+  
+    <H4>
+      Terms in cache
+    </H4>
+    <p>
+        Cache Hit:- Requested data found in cache.
+        <br>
+        Cache Miss:- Requested data not found in cache.
+    </p>
+    
+    <H4>
+        Cache invalidating:-
+    </H4>
+    <p>
+        If DB is updated with new data then cache contains invalid data.
+        We need some techniques for invalidating the data.
+        
+        And this is called Cache Invalidating.
+        We have to invalidate cache and update the cache with new DB data.
+        Below are some methods to invalidate cache.
+    </p>
+    <h5> Techniques For Invalidating Cache.</h5>
+    <ul>
+        <li>
+            <h6>Write Thorugh Caching:-</h6>
+            <p>
+            
+            In this technique, data is written in the cache and DB. Before the data is
+            written to DB, the cache is updated with the data first.
+            We will obtain consistency as DB and cache data updated at same time, and we can 
+            have fast retrieval. But the downside of this technique is minimizes the 
+            data loss risk, we need to write data in 2 sources before returning the client a
+            success notification.
+            </p>
+        </li>
+      
+        <li>
+            <h6>Write Back Caching:</h6>
+            <p>
+                Data is written only to the cache, after the data is written in cache, a completion notification
+                is sent to the client. The writing to the database is done after a time interval. This technique
+                is useful when the application is write-heavy. And it provides low latency for such app.
+        
+                Downside is the performance improvement comes with the risk of data losing in case of crashed cache.
+                Because the cache is the only copy of written data.
+            </p>
+        </li>
+       
+        <li>
+            <h6>Write Around Caching:</h6>
+            <p>
+                Writes hit the DB directly and updated the data there, but cache is used for only
+                Read operations. Cache will be updated with database only when cache contents willbe timedout.
+        
+                This has high persistency, and there will be eventual consistency, but less efficiency.
+            </p>
+        </li>
+       
+        <li>
+            <h6>Cache Aside:</h6>
+            <p>
+                The cache works along with the database trying to reduce the hits on DB as much 
+                as possible. When the user send a request the system first looks for data in cache,
+                if found just return to user else data is retrieved from the database, the cache is 
+                updated with this data.
+        
+                This approach works better for a ready - heavy system i.e., the data in the System
+                is not frequently updated.
+            </p>
+        </li>
+       
+        <li>
+            <h6>Read Through Cache:-</h6>
+            <p>
+                This is similar to cache aside strategy, the difference is that the cache always stays consistent
+                with the database. The cache library has to take the responsibility of maintaining consistency.
+        
+                The problem is in this approach for the first time when information is requested by a user, it will be 
+                a cache miss. Then system has to update the cache before returning the response.
+            </p>
+        </li>
+    
+    </ul>
+   
+    <br>
+    <h4>
+        Cache Eviction Policies:-
+    </h4>
+    <ul>
+        <li> FIFO</li>
+        <li> LIFO</li>
+        <li> LRU</li>
+        <li> LFU</li>
+
+    </ul>
+  </div>
+  
+
+      </div>
+    
+      <div class="col col-lg-2 col-12 col-sm-12"></div>
+    </div>
+
+    
+  <%- include('../../../partials/footer') %>
+</body>
+</html>
+
+  

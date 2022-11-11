@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html lang="en">
+  <%- include('../../partials/header') %>
+<body>
+
+    <%- include('../../partials/navigation') %>
+
+    <div class="row m-0">
+      <div class="col col-lg-2 col-12 col-sm-12"></div>
+    
+      <div class="col col-lg-8 col-12 col-sm-12 container-sm p-2 blog">
+                  
+        <div>
+          <H3> Types of WebServices. </H3>
+      
+          <p>
+            Two main architectural styles of web services. Function Centric Services, Resource-Centric Services.
+          </p>
+      
+          <H4>
+            Function-Centric Services
+          </H4>
+          <p>
+            Function-centric web services orginated a long time ago. The concept is that to be able
+            to call functions or objects methods on remote machines without the need to know how these
+            functions or objects are implemented, in which languages are they witten, or what architecture
+            are they running on. <br>
+            A simple way of thinking about function-centric web services is to imagine that anywhere in your
+            code you could call a function. As a result of that function call, your arguments and all the data
+            needed to execute that function would be serialized and sent over the network to a machine that is
+            supposed to execute it. After reaching the remote server, the data would be converted back to the
+            native formats used by that machine, the function would be invoked, and then results would be serialized
+            back to the network abstraction format. Then the result would be sent to your server and unserialized to
+            your native machine formats so that your code could continue working without ever knowing that the function was executed on a remote machine.
+            <br>
+            There were a few types of function-centric technologies, like CORBA, XML-RPC, SOAP, all focus on client
+            code being able to invoke a function implemented on a remote machine.
+          </p>
+          <img src="../../assets/soaparch.png" style="max-width: 100%">
+      
+          <H4>
+            Resource-Centric Services
+          </H4>
+          <p>
+            An alternative approach to developing web services focuses around the concept of a resource rather than a
+            function. In function-centric web services, each function can take arbitrary argument and produce arbitrary values.
+            In resource-centric web services, each resource can be treated as a type of object, and there are only a few operations
+            that can be performed on these objects (Create, delete, fetch, Update). We model resources in any way, but when interacting
+            with them it should be in standardized ways.
+            <br>
+            REST ( Representational State Transfer ) is an example of Resource-Centric service. REST services use URL's to identify the
+            resources. Once you know the URL of a resource, you need to decide which of the HTTP method we have to use
+            i.e., GET, POST, PUT, DELETE. It is not mandatory to use JSON, but JSON became popular due to its simplicity, compact form
+            and better readability that XML.
+          </p>
+        </div>
+      </div>
+    
+      <div class="col col-lg-2 col-12 col-sm-12"></div>
+    </div>
+
+    
+  <%- include('../../partials/footer') %>
+</body>
+</html>
+
+<!-- End of .container -->
+
