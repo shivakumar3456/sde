@@ -42,6 +42,6 @@ app.get(".*", function(req, res){
   res.render("./404notfound");
 });
 
-app.listen(3000, function(){
-        console.log("SERVER STARTED ON localhost:3000");     
+app.listen(8080, function(){
+        console.log("SERVER STARTED ON localhost:8080");     
 })
