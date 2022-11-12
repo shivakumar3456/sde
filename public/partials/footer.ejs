@@ -29,8 +29,16 @@
   
   <script>
     
+    function openDropDown(element){      
+      if ($(element).hasClass("showsubmenu")){
+        $(element).removeClass("showsubmenu");
+      }else{
+        $(".navitem").removeClass("showsubmenu");
+        $(element).addClass("showsubmenu");
+      }
+    }
+
     function showMenu() {
-  
       const x = document.getElementById("navlinkid");
       if (x.className === "navlinks") {
         x.className += " showmenu";

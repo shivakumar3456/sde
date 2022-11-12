@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg bg-primary navbar-dark p-3 header">
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark p-2 header">
     <div class="container-fluid d-flex mainnav">
   
       <div class="minititlebar">
@@ -19,10 +19,56 @@
   
       <div class="emptydiv"></div>
   
-      <div class="navlinks" id="navlinkid">
-        <a href="caching" class="btn" aria-current="page" href="#">Cache</a>
-        <a href="webservices" class="btn" href="#">Web Services</a>
-        <a href="scaling" class="btn" href="#">Scaling</a>
+      <div class="mynav">
+        <ul class="navlinks" id="navlinkid">
+          <!-- <li>
+            <a class="nav-link btn" href="#">
+            DSA
+            </a>
+          </li> -->
+
+          <li class="navitem" onclick="openDropDown(this)">
+            <a class="nav-link dropdowntoggle" id="navbarDropdown" role="button" aria-haspopup="true">
+              System Design 
+              <span class="material-symbols-outlined">
+                expand_more
+              </span>
+            </a>
+           
+            <div class="dropdownmenu bg-primary" aria-labelledby="navbarDropdown">
+              <ul class="navsublinks">
+                <li class="navitem">
+                  <a class="dropdownitem" href="caching" class="btn" aria-current="page" >Cache</a>
+                </li>
+                <li class="navitem">
+                  <a class="dropdownitem" href="webservices" class="btn" >Web Services</a>
+                </li>
+                <li class="navitem">
+                  <a class="dropdownitem" href="scaling" class="btn" >Scaling</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="navitem" onclick="openDropDown(this)">
+            <a class="nav-link dropdowntoggle" id="navbarDropdown" role="button" aria-haspopup="true">
+              DSA
+            </a>
+            <!-- <span class="material-symbols-outlined d-inline pt-3">
+              expand_more
+            </span> -->
+            <div class="dropdownmenu bg-primary" aria-labelledby="navbarDropdown">
+              <ul class="navsublinks">
+                <li class="navitem">
+                  <a class="dropdownitem" href="caching" class="btn" aria-current="page" >C++</a>
+                </li>
+                <li class="navitem">
+                  <a class="dropdownitem" href="webservices" class="btn" >Data Structure</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
       </div>
   
     </div>

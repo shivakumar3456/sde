@@ -20,6 +20,31 @@
   color: white;
 }
 
+.navlinks .navitem > a{
+  display: block;
+}
+
+.navlinks .navitem > a > span{
+  display: inline-block;
+  position: relative;
+  top: 5px
+}
+
+.navlinks, .navsublinks{
+  list-style-type:none;
+  padding: 0px;
+}
+
+.dropdownmenu{
+  display: none;
+}
+
+/* 
+.nav-item:hover .dropdownmenu{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+} */
 
 @media screen and (min-width: 700px){
   .mainnav{
@@ -28,7 +53,8 @@
 
   #navlinkid{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    margin: 0px;
   }
 
   .hamburgermenu{
@@ -40,12 +66,36 @@
     width: fit-content;
   }
 
-  /*.blog p{*/
-  /*  font-size: 30px;*/
-  /*}*/
-
   .brand{
     font-size: calc(1.3rem + .6vw);
+  }
+
+  .navlinks > .navitem{
+    padding: 0px 20px;
+  }
+
+   .navlinks > .navitem:hover .dropdownmenu
+   /* ,.navlinks .navitem.showsubmenu .dropdownmenu */
+   {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdownmenu{
+    position: absolute;
+    border-radius: 5px;
+  }
+
+  .dropdownmenu .navitem{
+    padding: 10px 20px;
+  }
+
+  .dropdownmenu .navitem:hover{
+    background-color: rgb(9, 57, 181);
+  }
+
+  .navlinks .navitem:last-child .dropdownmenu{
+    right: 0px;
   }
 }
 
@@ -57,15 +107,6 @@
 
 @media screen and (max-width: 700px){
   .mainnav{
-    flex-direction: column;
-  }
-
-  #navlinkid{
-    display: none;
-  }
-
-  #navlinkid.showmenu{
-    display: flex;
     flex-direction: column;
   }
 
@@ -84,5 +125,55 @@
   .brand{
     font-size: calc(1.3rem + .4vw);
   }
+  
+  #navlinkid{
+    display: none;
+  }
+
+  .mynav{
+    width: 100%;
+  }
+
+  .navlinks{
+    margin-top: 10px;
+  }
+
+  #navlinkid.showmenu{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdownmenu .navitem, .dropdownmenu .navsublinks{
+    display: block;
+    width: 100%;
+    /* background-color: rgb(9, 57, 181); */
+  }
+
+  .navlinks > .navitem{
+    border-top: 0.5px solid white;
+  }
+
+  .navitem{
+    width: 100%;
+  }
+
+  .navlinks > .navitem > a{
+    padding: 10px 20px;
+    display: block;
+  }
+
+  .dropdownmenu .navsublinks .navitem{
+    padding: 6px 40px;
+  } 
+
+  /* .navlinks > .navitem:hover .dropdownmenu, */
+   .navlinks .navitem.showsubmenu .dropdownmenu{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+a{
+  text-decoration: none;
 }
 
