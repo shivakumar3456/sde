@@ -1,6 +1,6 @@
 
   <!-- Remove the container if you want to extend the Footer to full width. -->
-  <div class="container-fluid px-0" >
+  <div class="container-fluid px-0 myfooter" >
   
     <footer class="text-center text-lg-start bg-primary">
       <!--    <div class="container d-flex justify-content-center">-->
@@ -28,7 +28,18 @@
   </div>
   
   <script>
-    
+    function adjustheight(){
+      var footerHeight = $(".myfooter").outerHeight();
+      var navHeight = $(".header").outerHeight();
+      var vheight =  $(document).innerHeight();
+      var blogminheight = vheight - footerHeight - navHeight;
+
+      $(".blog").css("min-height", blogminheight.toString() +"px");
+    }
+
+
+    window.onload = adjustheight;
+
     function openDropDown(element){      
       if ($(element).hasClass("showsubmenu")){
         $(element).removeClass("showsubmenu");
