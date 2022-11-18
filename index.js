@@ -38,7 +38,7 @@ app.get("/", function(req,res){
   res.render("./startpage");
 });
 
-app.get(".*", function(req, res){
+app.all("*", function(req, res){
   res.render("./404notfound");
 });
 
