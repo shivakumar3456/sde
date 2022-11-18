@@ -11,11 +11,20 @@ body{
   .blog p{
     font-size: 18px;
   }
+
+  p.card-text, h5.card-title{
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 500px){
   .blog p{
     font-size: 14px;
+  }
+
+  .quickblogsection{
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -36,4 +45,28 @@ h3{
 
 p, li{
   font-family: 'Poppins', sans-serif;
+}
+
+/* blog quickblogsection css */
+
+.quickblogsection{
+  display: flex;
+  flex-wrap: wrap;
+}
+ 
+.card-img-top{
+  width: 15.5rem;
+  height: auto;
+}
+
+.cardimage{
+  width: 16rem;
+  height: 15rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.card{
+  width: 16rem;
 }
