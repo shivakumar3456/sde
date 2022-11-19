@@ -17,17 +17,18 @@
         </div>
         
         <div class="mt-3">
+          <h4>Topics</h4>
           <!-- quick access -->
           <div class="accordion" id="accordionExample">
 
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button collapsed fontfamilyroboto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                  Cache
                 </button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body fontfamilypoppins">
                   <a href="caching/introcache" >Introduction to Cache</a> <br>
                 </div>
               </div>
@@ -35,12 +36,12 @@
 
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button class="accordion-button collapsed fontfamilyroboto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   Scaling
                 </button>
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
+                <div class="accordion-body fontfamilypoppins">
                   <a href="scaling/messagequeue" >Message Queue</a> <br>
                 </div>
               </div>
@@ -63,44 +64,47 @@
 
         </div>
 
-        
-        <div class="quickblogsection mt-3">
-
-          <!-- Card layout for popular blogs -->
-          <div class="card m-2">
-            <div class="cardimage img-thumbnail">
-              <img src="./assets/cacheintro.png" class="card-img-top" alt="...">
+        <div class="mt-4">
+          <h4> Recommended Blogs</h4>
+          <div class="quickblogsection mt-1">
+  
+            <!-- Card layout for popular blogs -->
+            <div class="card m-2">
+              <div class="cardimage ">
+                <img src="./assets/cacheintro.png" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Introduction to Cache</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="caching/introcache" class="btn btn-primary">Read</a>
+              </div>
             </div>
-            <div class="card-body">
-              <h5 class="card-title">Introduction to Cache</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="caching/introcache" class="btn btn-primary">Read</a>
+   
+            <div class="card m-2" >
+              <div class="cardimage ">
+                <img src="./assets/mqintro.png" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Introduction to Message queue</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="scaling/messagequeue" class="btn btn-primary">Read</a>
+              </div>
             </div>
+  
+            <div class="card m-2">
+              <div class="cardimage ">
+                <img src="./assets/soaparch.png" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">SOAP VS REST</h5>
+                <p class="card-text">This article explains between between resource oriented and function oriented webservices.</p>
+                <a href="/webservices" class="btn btn-primary">Read</a>
+              </div>
+            </div>
+  
           </div>
- 
-          <div class="card m-2" >
-            <div class="cardimage img-thumbnail">
-              <img src="./assets/mqintro.png" class="card-img-top" alt="...">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Introduction to Message queue</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="scaling/messagequeue" class="btn btn-primary">Read</a>
-            </div>
-          </div>
-
-          <div class="card m-2">
-            <div class="cardimage img-thumbnail">
-              <img src="./assets/soaparch.png" class="card-img-top" alt="...">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">SOAP VS REST</h5>
-              <p class="card-text">This article explains between between resource oriented and function oriented webservices.</p>
-              <a href="/webservices" class="btn btn-primary">Read</a>
-            </div>
-          </div>
-
         </div>
+
     </div>
   
     <div class="col col-lg-2 col-12 col-sm-12"></div>
