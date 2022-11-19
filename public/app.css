@@ -2,7 +2,7 @@
 .header{
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
 }
 
 .minititlebar{
@@ -40,6 +40,16 @@
 .navitem a, .navbar-brand, .brand{
   font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
 }
+
+.fontfamilypoppins
+{
+  font-family: 'Poppins', sans-serif;
+}
+
+.fontfamilyroboto{
+  font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
+}
+
 
 /* 
 .nav-item:hover .dropdownmenu{
