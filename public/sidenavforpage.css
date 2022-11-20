@@ -1,0 +1,17 @@
+#sidenavforpage{
+    position: sticky;
+    left: 0px;
+    display: none;
+}
+
+#sidenavforpage .active{
+    text-decoration: underline;
+}
+
+
+@media screen and (min-width: 700px){
+    #sidenavforpage{
+        display: flex;
+        flex-direction: column;
+    }
+}
