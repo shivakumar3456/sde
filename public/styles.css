@@ -6,6 +6,13 @@ body{
   line-height: 1.714285714;
 }
 
+/* 
+.blog{
+  background-color: white;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+} */
+
 
 @media screen and (min-width: 700px){
   .blog p{
@@ -90,12 +97,14 @@ p, li{
   width: 16rem;
   border-radius: 0.375rem;
   border: solid 2px #575757;
+  box-shadow: 0 0 5px #575757;
 }
 
 .card:hover, .card:focus{
   box-shadow: 0 0 10px #575757;
   z-index: 3;
-  /* rgb(9, 57, 181); */
+  /* rgb(9, 57, 181);
+   */
 }
 
 .accordion-button:focus{
