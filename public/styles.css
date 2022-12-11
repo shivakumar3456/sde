@@ -17,8 +17,8 @@ body{
 
 
 @media screen and (min-width: 700px){
-  .blog p{
-    font-size: 18px;
+  .blog p, li{
+    font-size: 17px;
   }
 
   p.card-text, h5.card-title{
@@ -33,7 +33,7 @@ body{
 }
 
 @media screen and (max-width: 500px){
-  .blog p{
+  .blog p, li{
     font-size: 14px;
   }
 
@@ -49,7 +49,7 @@ body{
 
 @media screen and (max-width: 700px){
 
-  .blog p{
+  .blog p, li{
     font-size: 16px;
   }
 
@@ -58,7 +58,7 @@ body{
   }
 }
 
-h3, h4, h5, h6{
+h2, h3, h4, h5, h6{
   font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
 }
 
