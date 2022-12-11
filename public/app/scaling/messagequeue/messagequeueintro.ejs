@@ -8,23 +8,90 @@
 
     <div class="row m-0">
       <div class="col col-lg-2 col-12 col-sm-12">
+
+         <!-- side nav for page contents-->
+         <%- include('../../../partials/sidenavforpage', {blogdata: [
+          { tagId:'#MQIntro', data:'Introduction'},
+          { tagId:'#Producers', data:'Message Producer'},
+          { tagId:'#Broker', data:'Message Broker'},
+          { tagId:'#Consumers', data:'Message Consumer'}
+          ]}) %>
+
       </div>
     
-      <div class="col col-lg-8 col-12 col-sm-12 container-sm p-2 blog">
-                        
-                
-        <h3>Message Queue</h3>
+      <div class="col col-lg-8 col-12 col-sm-12 container-sm p-2 blog" data-bs-spy="scroll" 
+      data-bs-target="#sidenavforpage" data-bs-offset="0" data-bs-smooth-scroll="true" tabindex="0">
+        
+      <%- include('../../../partials/articletitle', 
+        { title:'Message Queue', imagelink:'../../../assets/mqintro.png'}) %>
+        
+        <div id="MQIntro">
+          <h4>Introduction To Message Queue</h4>
 
-        <p>
-            In designing asynchronous applications Message Queues plays a major role. And it also helps systems to scale with less 
-            dependency on frontend and backend components.
-        </p>
+          <p>
+              In designing asynchronous applications Message Queues plays a major role. And it also helps systems to scale with less 
+              dependency on frontend and backend components.
+          </p>
 
-        <p>
-            A Message Queue is a component that buffers and distributes asynchronous requests. In the MQ context messages are assumed 
-            to be one-way, fire and forget requests. Messages are created by message producers and then buffered by MQ. Finally they 
-            are delivered to consumers.
-        </p>
+          <p>
+            A message queue is a component that buffers and distributes asynchronous requests. In the message queue context, messages are assumed to be one-way, 
+            fire and forget requests. You can think of a message as a piece of xml or json with all of the data that is needed to perform the requested operation. 
+            Messages are created by message producers and then buffered by the message queue. Finally, they are delivered to message consumers who perform asynchronous action on behalf of the producer.
+          </p>
+
+          <p>
+            Producers and Consumers are often hosted on different servers and can be implemented in different technologies to allow further flexibility. Producers and consumers can work independently of each other, 
+            and they are coupled only by the message format and message queue location.The separation of producers and consumers using a queue gives us the benefit of nonblocking communication between producer and consumer. 
+            Producers do not have to wait for the consumer to become available. Another benefit of this separation is that now producers and consumers can be scaled separately. 
+
+          </p>
+        </div>        
+
+        <div id="Producers">
+          <h4> Message Producer </h4>
+          <p>
+            Message producers are parts of the client code that initiate asynchronous processing. In message queue- based processing, producers have very little responsibility.
+          </p>
+        </div>
+
+        <div id="Broker">
+          <h4> Message Broker </h4>
+          <p>
+            The core component of message queue-based asynchronous processing is the queue itself. It is the place where messages are sent and buffered for consumers. 
+            If the Message queue is created as a separate component then it is called a Message broker or Message-oriented middleware.
+            A Message broker is a specialized application design for fast and flexible message queuing, routing and delivery. 
+            Brokers are the more sophisticated way of implementing message queues and usually provide a lot of specialized functionality out of the box. 
+            Message brokers are also optimized for high concurrency and high <a href="https://igotanoffer.com/blogs/tech/latency-throughput-availability-system-design-interview#throughput">throughput</a> because being able to enqueue messages fast is one of their key responsibilities. 
+            A message broker may be referred to as message-oriented middleware or enterprise service bus, depending on the technology used.
+            They are often simpler than relational database engines, which allows them to reach higher throughput and scale well.
+          </p>
+        </div>
+
+        <div id="Consumers">
+          <h4> Message Consumers </h4>
+          <p>
+            The main responsibility of the message consumer is to receive and process messages from the message queue. 
+            These are the components which actually do asynchronous processing.
+            The two most common ways of implementing consumers are a corn-like and daemon-like approach.
+            Message consumers can use different subscription methods. Message brokers usually allow consumers to specify what messages they are interested in. 
+            It is possible to read messages directly from a names queue or to use more advanced routing methods. 
+            The availability of different routing methods may depend on which message broker you decide to use, but they usually support the following routing methods.
+            
+            <ol>
+              <li> Direct Worker Queue Method </li>
+              <li> Pub/Sub Method.</li>
+              <li> Custom Routing Method.</li>
+            </ol>
+          </p>
+        </div>
+
+        <div id="protocol">
+          <h4> Messaging Protocols</h4>
+          <p>
+            A messaging protocol defines how client libraries connect to a message broker and how messages are transmitted. They used to transport message from producers to consumers.
+            Three most common protocols in open-source world: <b>AMQP, STOMP, JMS</b>.
+          </p>
+        </div>
 
         <h4>Advantages</h4>
         <p>
@@ -34,6 +101,10 @@
             <li>The separation of producers and consumers using queue gives us the benefit of non blocking communication.</li>
           </ol>
         </p>
+
+        <%- include('../../../partials/previousandnext', {previousLink: "caching/introcache",
+          nextLink: "/webservices"  
+         }) %>
 
 
       </div>
