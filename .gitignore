@@ -1,7 +1,4 @@
 node_modules
 .vscode
-.firebaserc
-firebase.json
-functions
 # Local Netlify folder
 .netlify
