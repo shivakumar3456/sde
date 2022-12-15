@@ -6,7 +6,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "nodemon ./index.js"
+    "start": "netlify dev"
   },
   "dependencies": {
     "body-parser": "^1.20.1",
