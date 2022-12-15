@@ -9,9 +9,9 @@ const router = express.Router();
 //setting the view engine as EJS. 
 app.set('view engine', 'ejs');
 //roots the views directory to public
-app.set('views', 'public');
+app.set('views', path.join(__dirname, 'public'));
 //tells express that the public folder is the static folder
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 router.get("/webservices", function(req,res){
